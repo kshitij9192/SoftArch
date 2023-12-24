@@ -1,6 +1,11 @@
 #include "DataConsumer.h"
 
+DataConsumer::DataConsumer(std::string& name, DataBuffer& dB) : consumerName(name), dataBuffer(dB)
+{
+
+}
+
 void DataConsumer::consumeData()
 {
-    int data = DataBuffer.pop();
+    int data = dataBuffer.pop();
 }

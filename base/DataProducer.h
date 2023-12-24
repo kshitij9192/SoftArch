@@ -3,8 +3,12 @@
 
 class DataProducer
 {
+    DataBuffer& dataBuffer;
+    std::string producerName;
     public:
+    DataProducer(std::string& name, DataBuffer& dB);
 
-    void generateData();
+    int generateData();
+    void pushDataToBuffer();
 
 }

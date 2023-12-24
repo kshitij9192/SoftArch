@@ -1,7 +1,18 @@
 #include "DataProducer.h"
+#include <vector>
 
-void DataProducer::generateData()
+DataProducer::DataProducer(std::string& name, DataBuffer& dB) : producerName(name), dataBuffer(dB)
 {
-    int num = 0;
-    DataBuffer.push(num);
+
+}
+
+void DataProducer::pushDataToBuffer()
+{
+    int num = generateData();
+    dataBuffer.push(num);
+}
+
+int DataProducer::generateData()
+{
+
 }
